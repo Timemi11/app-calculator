@@ -1,0 +1,346 @@
+$Purple: hsl(259, 100%, 65%);
+$Lightred: hsl(0, 100%, 67%);
+//Neutral
+$White: hsl(0, 0%, 100%);
+$Offwhite: hsl(0, 0%, 94%);
+$Lightgrey: hsl(0, 0%, 86%);
+$Smokeygrey: hsl(0, 1%, 44%);
+$Offblack: hsl(0, 0%, 8%);
+
+//md
+$Mobile: 375px;
+$Desktop: 1440px;
+
+//font-size
+$fontS-32pxInput:32px;
+//font-weight
+$Weights400i: 400 ;
+$Weights700:700;
+$Weights800i:800;
+
+
+@font-face{
+    font-family:"myfont";
+    src: url(/assets/fonts/Poppins-Regular.ttf);
+}
+@font-face{
+    font-family:"myfont1";
+    src: url(/assets/fonts/Poppins-ExtraBoldItalic.ttf);
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family: "myfont";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: $Offwhite;
+    max-width: 900px;
+    margin:0 auto ;
+    
+}
+
+.app-calculator{
+    user-select: none;
+    padding: 0 2rem;
+    box-shadow: 0 0 2px rgba($Offblack,0.5);
+   background-color: $White;
+
+   height: 500px;
+   width: 100%;
+   border-radius: 1rem 1rem 10rem 1rem;
+    & .field{
+        height:200px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding: 2rem;
+        & .form{
+            flex: 1 0 100px;
+            margin: 0 20px 0 0;
+            & label{
+                margin-bottom: 5px;
+                display: block;
+                color: $Smokeygrey;
+                font-weight: $Weights700;
+                letter-spacing: 2px;
+            }
+            & input{
+                width: 150px;
+                border: 1px solid $Lightgrey;
+                border-radius: 10px;
+                padding: 16px;
+                font-weight: $Weights700;
+                font-size: $fontS-32pxInput;
+            &:focus{
+                border: none;
+                outline: none;
+                border: 2px solid $Purple;
+            }
+            
+            }
+            .errorms{
+                visibility: hidden;
+                padding: .5rem 0;
+                font-size: clamp(11px,1.2vw,16px);
+                text-align: left;
+                color: $Lightred;
+            }
+        }
+        & .form.error-empty{
+                    & .form.error{
+            flex: 1 0 100px;
+            margin: 0 20px 0 0;
+            & label{
+                margin-bottom: 5px;
+                display: block;
+                color: hsl(0, 100%, 67%);
+                font-weight: $Weights700;
+                letter-spacing: 2px;
+            }
+            & input{
+                width: 150px;
+                border: 1px solid hsl(0, 100%, 67%);
+                border-radius: 10px;
+                padding: 16px;
+                font-weight: $Weights700;
+                font-size: $fontS-32pxInput;
+            &:focus{
+                border: 1px solid hsl(0, 100%, 67%);
+                outline: none;
+            }
+            
+            }
+            .errorms{
+                padding: .5rem 0;
+                font-size: clamp(11px,1.2vw,16px);
+                text-align: left;
+                color: $Lightred;
+                visibility: hidden;
+            
+            }
+        }
+        }
+        & .form.valid{
+            flex: 1 0 100px;
+            margin: 0 20px 0 0;
+            & label{
+                margin-bottom: 5px;
+                display: block;
+                color: hsl(0, 100%, 67%);
+                font-weight: $Weights700;
+                letter-spacing: 2px;
+            }
+            & input{
+                width: 150px;
+                border: 1px solid hsl(0, 100%, 67%);
+                border-radius: 10px;
+                padding: 16px;
+                font-weight: $Weights700;
+                font-size: $fontS-32pxInput;
+            &:focus{
+                border: 1px solid hsl(0, 100%, 67%);
+                outline: none;
+            }
+            
+            }
+            .errorms{
+                padding: .5rem 0;
+                font-size: clamp(11px,1.2vw,16px);
+                text-align: left;
+                color: $Lightred;
+                visibility: visible;
+            
+            }
+        }
+        & .form.empty{
+            flex: 1 0 100px;
+            margin: 0 20px 0 0;
+            & label{
+                margin-bottom: 5px;
+                display: block;
+                color: hsl(0, 100%, 67%);
+                font-weight: $Weights700;
+                letter-spacing: 2px;
+            }
+            & input{
+                width: 150px;
+                border: 1px solid hsl(0, 100%, 67%);
+                border-radius: 10px;
+                padding: 16px;
+                font-weight: $Weights700;
+                font-size: $fontS-32pxInput;
+            &:focus{
+                border: 1px solid hsl(0, 100%, 67%);
+                outline: none;
+            }
+            
+            }
+            .errorms{
+                padding: .5rem 0;
+                font-size: clamp(11px,1.2vw,16px);
+                text-align: left;
+                color: $Lightred;
+                visibility: visible;
+            
+            }
+        }
+        & .form.error{
+            flex: 1 0 100px;
+            margin: 0 20px 0 0;
+            & label{
+                margin-bottom: 5px;
+                display: block;
+                color: hsl(0, 100%, 67%);
+                font-weight: $Weights700;
+                letter-spacing: 2px;
+            }
+            & input{
+                width: 150px;
+                border: 1px solid hsl(0, 100%, 67%);
+                border-radius: 10px;
+                padding: 16px;
+                font-weight: $Weights700;
+                font-size: $fontS-32pxInput;
+            &:focus{
+                border: 1px solid hsl(0, 100%, 67%);
+                outline: none;
+            }
+            
+            }
+            .errorms{
+                padding: .5rem 0;
+                font-size: clamp(11px,1.2vw,16px);
+                text-align: left;
+                color: $Lightred;
+                visibility: hidden;
+            
+            }
+        }
+        & .form.error:nth-child(1){
+            .errorms{
+                visibility: visible;
+            }
+        }
+
+
+        & svg{
+            z-index: 1;
+            position: absolute;
+            bottom: -40px;
+            right: 0;
+            background-color: $Purple;
+            width:  80px;
+            height: 80px;
+            padding: 20px;
+            border-radius: 3rem;
+        &:hover{
+            cursor: pointer;
+            background-color: $Offblack;
+        }
+        }
+
+        &::after{
+            position:absolute;
+            content: '';
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            background-color: $Lightgrey;
+            height: 2px;
+        }
+    }
+// output
+    & .output{
+        font-family: "myfont1";
+        padding: 2rem;
+        & h1{
+            font-size: 50px;
+            font-weight: $Weights800i;
+        & span:nth-of-type(1){
+            color: $Purple;
+        }
+        }
+    }
+}
+
+
+@media screen and (max-width:560px){
+    .app-calculator{
+        width: 95%;
+        height: 550px;
+        padding: 0 ;
+        & .field{
+            height: 35%;
+            & .form{
+                margin: 0 5px ;
+                display: inline-block;
+                width: 90px;
+                & input{
+                    font-size:18px ;
+                padding: .5rem 1rem;
+                  width: 100%;
+                }
+            }
+            
+
+            & .form.valid{
+                margin: 0 5px ;
+                display: inline-block;
+                width: 90px;
+                & input{
+                    font-size:18px ;
+                padding: .5rem 1rem;
+                  width: 100%;
+                }
+            }
+            & .form.empty{
+                margin: 0 5px ;
+                display: inline-block;
+                width: 90px;
+                & input{
+                    font-size:18px ;
+                padding: .5rem 1rem;
+                  width: 100%;
+                }
+            }
+            & .form.error{
+                margin: 0 5px ;
+                display: inline-block;
+                width: 90px;
+                & input{
+                    font-size:18px ;
+                padding: .5rem 1rem;
+                  width: 100%;
+                }
+            }
+            & svg{
+                width: 60px;
+                height: 60px;
+                border-radius:2rem;
+                padding: 10px;
+                bottom: -30px;
+                right: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }  
+        }
+    } 
+}
+@media screen and (max-width:321px){
+// output
+
+.app-calculator{
+    & .output{      
+        & h1{
+            font-size: 40px;
+        }
+    }
+}
+}
+    

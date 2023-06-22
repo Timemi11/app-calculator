@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./scss/app.css">
+  <title>Frontend Mentor | Age calculator app</title>
+
+</head>
+
+<body>
+  <div class="app-calculator">
+    <div class="field">
+      <div class="form">
+        <label for="day">DAY</label>
+        <input id="day" type="text" placeholder="DD">
+        <p class="errorms">The field is required</p>
+      </div>
+      <div class="form">
+        <label for="month">MONTH</label>
+        <input id="month" type="text" placeholder="MM">
+        <p class="errorms">The field is required</p>
+      </div>
+      <div class="form">
+        <label for="year">YEAR</label>
+        <input id="year" type="text" placeholder="YYYY">
+        <p class="errorms">The field is required</p>
+      </div>
+      <svg id="submit" xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44">
+        <g fill="none" stroke="#FFF" stroke-width="2">
+          <path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44" />
+        </g>
+      </svg>
+    </div>
+    <div class="output">
+      <h1>
+        <span class="outputyears">--</span>
+        <span>years</span>
+      </h1>
+      <h1>
+        <span class="outputmonths">--</span>
+        <span>months</span>
+      </h1>
+      <h1>
+        <span class="outputdays">--</span>
+        <span>days</span>
+      </h1>
+    </div>
+  </div>
+
+  <script src="/assets/js/script.js"></script>
+</body>
+
+</html>

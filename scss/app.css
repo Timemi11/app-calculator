@@ -1,0 +1,299 @@
+@font-face {
+  font-family: "myfont";
+  src: url(/assets/fonts/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: "myfont1";
+  src: url(/assets/fonts/Poppins-ExtraBoldItalic.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "myfont";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: hsl(0, 0%, 94%);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.app-calculator {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  padding: 0 2rem;
+  box-shadow: 0 0 2px rgba(20, 20, 20, 0.5);
+  background-color: hsl(0, 0%, 100%);
+  height: 500px;
+  width: 100%;
+  border-radius: 1rem 1rem 10rem 1rem;
+}
+.app-calculator .field {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 2rem;
+}
+.app-calculator .field .form {
+  flex: 1 0 100px;
+  margin: 0 20px 0 0;
+}
+.app-calculator .field .form label {
+  margin-bottom: 5px;
+  display: block;
+  color: hsl(0, 1%, 44%);
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.app-calculator .field .form input {
+  width: 150px;
+  border: 1px solid hsl(0, 0%, 86%);
+  border-radius: 10px;
+  padding: 16px;
+  font-weight: 700;
+  font-size: 32px;
+}
+.app-calculator .field .form input:focus {
+  border: none;
+  outline: none;
+  border: 2px solid hsl(259, 100%, 65%);
+}
+.app-calculator .field .form .errorms {
+  visibility: hidden;
+  padding: 0.5rem 0;
+  font-size: clamp(11px, 1.2vw, 16px);
+  text-align: left;
+  color: hsl(0, 100%, 67%);
+}
+.app-calculator .field .form.error-empty .form.error {
+  flex: 1 0 100px;
+  margin: 0 20px 0 0;
+}
+.app-calculator .field .form.error-empty .form.error label {
+  margin-bottom: 5px;
+  display: block;
+  color: hsl(0, 100%, 67%);
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.app-calculator .field .form.error-empty .form.error input {
+  width: 150px;
+  border: 1px solid hsl(0, 100%, 67%);
+  border-radius: 10px;
+  padding: 16px;
+  font-weight: 700;
+  font-size: 32px;
+}
+.app-calculator .field .form.error-empty .form.error input:focus {
+  border: 1px solid hsl(0, 100%, 67%);
+  outline: none;
+}
+.app-calculator .field .form.error-empty .form.error .errorms {
+  padding: 0.5rem 0;
+  font-size: clamp(11px, 1.2vw, 16px);
+  text-align: left;
+  color: hsl(0, 100%, 67%);
+  visibility: hidden;
+}
+.app-calculator .field .form.valid {
+  flex: 1 0 100px;
+  margin: 0 20px 0 0;
+}
+.app-calculator .field .form.valid label {
+  margin-bottom: 5px;
+  display: block;
+  color: hsl(0, 100%, 67%);
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.app-calculator .field .form.valid input {
+  width: 150px;
+  border: 1px solid hsl(0, 100%, 67%);
+  border-radius: 10px;
+  padding: 16px;
+  font-weight: 700;
+  font-size: 32px;
+}
+.app-calculator .field .form.valid input:focus {
+  border: 1px solid hsl(0, 100%, 67%);
+  outline: none;
+}
+.app-calculator .field .form.valid .errorms {
+  padding: 0.5rem 0;
+  font-size: clamp(11px, 1.2vw, 16px);
+  text-align: left;
+  color: hsl(0, 100%, 67%);
+  visibility: visible;
+}
+.app-calculator .field .form.empty {
+  flex: 1 0 100px;
+  margin: 0 20px 0 0;
+}
+.app-calculator .field .form.empty label {
+  margin-bottom: 5px;
+  display: block;
+  color: hsl(0, 100%, 67%);
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.app-calculator .field .form.empty input {
+  width: 150px;
+  border: 1px solid hsl(0, 100%, 67%);
+  border-radius: 10px;
+  padding: 16px;
+  font-weight: 700;
+  font-size: 32px;
+}
+.app-calculator .field .form.empty input:focus {
+  border: 1px solid hsl(0, 100%, 67%);
+  outline: none;
+}
+.app-calculator .field .form.empty .errorms {
+  padding: 0.5rem 0;
+  font-size: clamp(11px, 1.2vw, 16px);
+  text-align: left;
+  color: hsl(0, 100%, 67%);
+  visibility: visible;
+}
+.app-calculator .field .form.error {
+  flex: 1 0 100px;
+  margin: 0 20px 0 0;
+}
+.app-calculator .field .form.error label {
+  margin-bottom: 5px;
+  display: block;
+  color: hsl(0, 100%, 67%);
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.app-calculator .field .form.error input {
+  width: 150px;
+  border: 1px solid hsl(0, 100%, 67%);
+  border-radius: 10px;
+  padding: 16px;
+  font-weight: 700;
+  font-size: 32px;
+}
+.app-calculator .field .form.error input:focus {
+  border: 1px solid hsl(0, 100%, 67%);
+  outline: none;
+}
+.app-calculator .field .form.error .errorms {
+  padding: 0.5rem 0;
+  font-size: clamp(11px, 1.2vw, 16px);
+  text-align: left;
+  color: hsl(0, 100%, 67%);
+  visibility: hidden;
+}
+.app-calculator .field .form.error:nth-child(1) .errorms {
+  visibility: visible;
+}
+.app-calculator .field svg {
+  z-index: 1;
+  position: absolute;
+  bottom: -40px;
+  right: 0;
+  background-color: hsl(259, 100%, 65%);
+  width: 80px;
+  height: 80px;
+  padding: 20px;
+  border-radius: 3rem;
+}
+.app-calculator .field svg:hover {
+  cursor: pointer;
+  background-color: hsl(0, 0%, 8%);
+}
+.app-calculator .field::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  background-color: hsl(0, 0%, 86%);
+  height: 2px;
+}
+.app-calculator .output {
+  font-family: "myfont1";
+  padding: 2rem;
+}
+.app-calculator .output h1 {
+  font-size: 50px;
+  font-weight: 800;
+}
+.app-calculator .output h1 span:nth-of-type(1) {
+  color: hsl(259, 100%, 65%);
+}
+
+@media screen and (max-width: 560px) {
+  .app-calculator {
+    width: 95%;
+    height: 550px;
+    padding: 0;
+  }
+  .app-calculator .field {
+    height: 35%;
+  }
+  .app-calculator .field .form {
+    margin: 0 5px;
+    display: inline-block;
+    width: 90px;
+  }
+  .app-calculator .field .form input {
+    font-size: 18px;
+    padding: 0.5rem 1rem;
+    width: 100%;
+  }
+  .app-calculator .field .form.valid {
+    margin: 0 5px;
+    display: inline-block;
+    width: 90px;
+  }
+  .app-calculator .field .form.valid input {
+    font-size: 18px;
+    padding: 0.5rem 1rem;
+    width: 100%;
+  }
+  .app-calculator .field .form.empty {
+    margin: 0 5px;
+    display: inline-block;
+    width: 90px;
+  }
+  .app-calculator .field .form.empty input {
+    font-size: 18px;
+    padding: 0.5rem 1rem;
+    width: 100%;
+  }
+  .app-calculator .field .form.error {
+    margin: 0 5px;
+    display: inline-block;
+    width: 90px;
+  }
+  .app-calculator .field .form.error input {
+    font-size: 18px;
+    padding: 0.5rem 1rem;
+    width: 100%;
+  }
+  .app-calculator .field svg {
+    width: 60px;
+    height: 60px;
+    border-radius: 2rem;
+    padding: 10px;
+    bottom: -30px;
+    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media screen and (max-width: 321px) {
+  .app-calculator .output h1 {
+    font-size: 40px;
+  }
+}/*# sourceMappingURL=app.css.map */
